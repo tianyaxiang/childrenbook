@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "童书有童趣",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  }
+}
