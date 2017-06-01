@@ -8,6 +8,6 @@
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "童书有童趣",
     "navigationBarTextStyle": "#fff",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   }
 }

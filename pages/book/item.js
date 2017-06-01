@@ -11,6 +11,9 @@ Page({
   getBookById(id) {
     let that = this;
     bookService.getBookId(id, function (data) {
+      wx.setNavigationBarTitle({
+        title: data.title,
+      })
       that.setData({
         item: data
       })
@@ -20,8 +23,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     console.log(options.id)
     this.getBookById(options.id)
+  },
+  previewImage: function (e) {
+    let url = e.currentTarget.dataset.imgurl
+    wx.previewImage({
+      current: '', // 当前显示图片的http链接
+      urls: [url] // 需要预览的图片http链接列表
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
