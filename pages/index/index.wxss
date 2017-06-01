@@ -1,1 +1,9 @@
-/* pages/index/index.wxss */
+
+.weui-media-box__hd_in-appmsg {
+  width:109px;
+height:135px;
+line-height:135px;
+}
+.weui-media-box__desc{
+  line-height:1.3;
+}

@@ -1,9 +1,8 @@
 <view class="page">
   <view class="page__bd">
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">儿童文学</view>
       <view class="weui-panel__bd">
-        <navigator url="../book/item?id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{books}}">
+        <view class="weui-media-box weui-media-box_appmsg">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
             <image class="weui-media-box__thumb" src="{{item.image}}" />
           </view>
@@ -17,16 +16,24 @@
             <view class="weui-media-box__desc">ISBN: {{item.isbn13}}</view>
             <view class="weui-media-box__desc">定价: {{item.price}}</view>
           </view>
-        </navigator>
-        <view class="weui-loadmore" wx:if="{{loading}}">
-          <view class="weui-loading"></view>
-          <view class="weui-loadmore__tips">正在加载</view>
-        </view>
-        <view class="weui-loadmore weui-loadmore_line" wx:if="{{loaded}}">
-          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">加载完毕了哦</view>
         </view>
       </view>
-
+      <view class="weui-panel__ft">
+        <view class="weui-article">
+          <view class="weui-article__h1">内容简介 · · · · · </view>
+          <view class="weui-article__section">
+            <view class="weui-article__p">
+              {{item.summary}}
+            </view>
+          </view>
+          <view class="weui-article__h1">作者简介 · · · · · </view>
+          <view class="weui-article__section">
+            <view class="weui-article__p">
+              {{item.author_intro}}
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

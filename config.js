@@ -1,10 +1,11 @@
 /**
  * 小程序配置文件
  */
-var host = "https://api.douban.com/v2/book/"
+var host = "https://api.douban.com/v2"
 
 var config = {
   host,
+  bookUrl: `${host}/book/`,
   loginUrl: `${host}/passport/login`,
   // 用code换取openId
   openIdUrl: `https://${host}/openid`,
